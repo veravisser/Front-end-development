@@ -1,0 +1,214 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+
+/* Alinea die vetgedrukt staat */
+
+header {
+	height: 80px;
+	background: #0030C4;
+	padding: -0 20px;
+	color: #fff;
+
+}
+
+main {
+	background-image: url(achtergrond.png);
+}
+
+article {
+	background-color: #73CC72;
+	padding: 1em;
+}
+
+
+h1 {
+
+	padding: 5px;
+	text-align: center;
+}
+
+h2 {
+
+	padding: 1em;
+	text-align: center;
+
+}
+
+h3 {
+	padding: 0 40px;
+	margin-bottom:  1em;
+	margin-top:  1em;
+	font-size: 1em;
+	text-align: left;
+	
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	line-height: 50px;
+	font-size: 1em;
+}
+
+.menu a {
+	color: #fff;
+	margin: 0px;
+
+	text-transform: capitalize;
+	text-decoration: none;
+	padding: 0 10px;
+	transition: 0.4s;
+}
+
+a:link,
+a:visited {
+
+	color: white;
+	text-decoration: none;
+}
+
+.socialmedia:link,
+.socialmedia:visited {
+
+	color: black;
+	text-decoration: none;
+}
+
+.socialmedia {
+	 background-color:#73CC72;
+
+}
+ ul.social {
+	list-style: none;
+	 background-color:#73CC72;
+	 margin: 10px;
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-around;
+	 
+	
+	
+
+}
+
+.social a:hover,
+.social a:active {
+
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.show-menu-btn,
+.hide-menu-btn {
+	transition: 0.4s;
+	margin-top: -1em;
+	font-size: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+.show-menu-btn {
+	float: right;
+
+
+}
+
+.show-menu-btn i {
+	line-height: 80px;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+	color: #73CC72;
+	font-weight: bold;
+}
+
+#chk {
+	position: absolute;
+	visibility: hidden;
+	z-index: -1111;
+}
+
+.content {
+	padding: 0 30px;
+}
+
+.content img {
+	width: 100%;
+	max-width: 700px;
+	margin: auto
+}
+
+p {
+	text-align: justify;
+	margin: 10px;
+}
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width:47em) {
+
+	.show-menu-btn,
+	.hide-menu-btn {
+		display: block;
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #0030C4;
+		right: -100%;
+		list-style: none;
+		top: 0;
+		text-align: center;
+		padding: 80px 0;
+		line-height: normal;
+		transition: 0.7s;
+		font-size: 1em;
+		opacity: 0.8;
+		
+	}
+
+	.menu a {
+		display: block;
+		padding: 20px;
+	}
+
+	.hide-menu-btn {
+		/* kruisje */
+		position: absolute;
+		top: 40px;
+		right: 40px;
+	}
+
+	#chk:checked ~ .menu  {
+		/* uitklopmenu */
+		right: 0;
+		z-index: 1;
+		
+	}
+
+

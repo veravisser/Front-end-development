@@ -1,13 +1,12 @@
 * {
 	box-sizing: border-box;
-	margin: auto;
-	padding: 0;
+	margin: auto;ß
 	font-family: 'Teko'sans-serif;
+
 }
 
 main {
 	background-image: url(images/achtergrond.png);
-
 }
 
 h1 {
@@ -60,35 +59,131 @@ header {
 	padding: 10px;
 	color: #fff;
 
-
-
-
 }
 
-section {
-
+.artiesten {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-
-
-
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
 }
 
 article {
-	margin: 1em 1em;
-	padding: 0em 10px;
+	
+	margin: 3em 1em;
+	padding: 1em ;
 	background-color: #73CC72;
 	box-shadow: 0 0 15px 11px rgba(0, 0, 0, .85);
 	border-image: url(images/2deachtergrond.png);
 
+	-webkit-animation: anim 3s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
 
 
 }
+
+/* https://codepen.io/tjoen/pen/ByZrdZ  */
+@-webkit-keyframes anim {
+	0% {
+		text-shadow: -6px 4px 0px red;
+	}
+
+	10% {
+		text-shadow: 4px -6px 0px green;
+	}
+
+	20% {
+		text-shadow: -9px 4px 0px blue;
+	}
+
+	30% {
+		text-shadow: 4px -6px 0px yellow;
+	}
+
+	40% {
+		text-shadow: -8px 4px 0px orange;
+	}
+
+	50% {
+		text-shadow: 4px 5px 0px purple;
+	}
+
+	60% {
+		text-shadow: -6px 4px 0px brown;
+	}
+
+	70% {
+		text-shadow: 4px 7px 0px pink;
+	}
+
+	80% {
+		text-shadow: -9px -4px 0px lime;
+	}
+
+	90% {
+		text-shadow: 4px -6px 0px cyan;
+	}
+
+	100% {
+		text-shadow: -9px 4px 0px teal;
+	}
+}
+
+@keyframes anim {
+	0% {
+		text-shadow: -6px 4px 0px red;
+	}
+
+	10% {
+		text-shadow: 4px -6px 0px green;
+	}
+
+	20% {
+		text-shadow: -9px 4px 0px blue;
+	}
+
+	30% {
+		text-shadow: 4px -6px 0px yellow;
+	}
+
+	40% {
+		text-shadow: -8px 4px 0px orange;
+	}
+
+	50% {
+		text-shadow: 4px 5px 0px purple;
+	}
+
+	60% {
+		text-shadow: -6px 4px 0px brown;
+	}
+
+	70% {
+		text-shadow: 4px 7px 0px pink;
+	}
+
+	80% {
+		text-shadow: -9px -4px 0px lime;
+	}
+
+	90% {
+		text-shadow: 4px -6px 0px cyan;
+	}
+
+	100% {
+		text-shadow: -9px 4px 0px teal;
+	}
+}
+}
+
+
+
 
 
 .intro {
 	margin: 1em;
 	font-size: 1em;
+	padding-top: 10px;
+
 
 }
 
@@ -106,6 +201,7 @@ article {
 
 .leesmeer:hover {
 	transform: rotate(15deg) skewX(45deg);
+
 }
 
 .socialmedia {
@@ -141,17 +237,6 @@ https://tympanus.net/codrops/2012/05/22/creating-an-animated-3d-bouncing-ball-wi
 	}
 }
 
-section h2 {
-	grid-column: 1/-1;
-	margin: 1em;
-	justify-content: center;
-	text-align: center;
-	padding: 6px;
-	background-color: white;
-	height: 30px;
-	box-shadow: 0 0 15px 11px rgba(0, 0, 0, .85);
-
-}
 
 section h2 {
 	grid-column: 1/-1;
@@ -195,17 +280,31 @@ section h2 {
 	}
 
 }
+
 h3 {
 	font-size: 1em;
-	padding: 1em;
+	padding: 2em;
 	margin: auto;
 	text-align: center;
+	letter-spacing: 10px;
 }
 
 
 
 
 img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 200px;
+	max-width: 200px;
+
+	border: 1px solid #999;
+	opacity: 0.8;
+
+	box-shadow: 0 0 15px 11px rgba(0, 0, 0, .85);
+}
+img band {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -237,21 +336,18 @@ img:active {
 	line-height: 70px;
 	font-size: 1em;
 	font-family: 'Teko';
-	
-
-
-
 }
-.menu li{
+
+.menu li {
 	list-style: none;
 }
 
-.menu  a {
+.menu a {
 	color: #fff;
 
 
 	text-transform: capitalize;
-	
+
 	padding: 10px 10px;
 	transition: 0.4s;
 }
@@ -261,7 +357,8 @@ img:active {
 	flex-direction: row;
 	justify-content: center;
 }
-
+iframe{ 
+}
 a:link,
 a:visited {
 
@@ -295,11 +392,13 @@ ul.social {
 }
 
 .social a:hover,
+.social a:focus,
 .social a:active {
 
 	color: #FFFFFF;
 	font-weight: bold;
 }
+
 
 .show-menu-btn,
 .hide-menu-btn {
@@ -318,6 +417,7 @@ ul.social {
 	line-height: 70px;
 }
 
+
 .show-menu-btn i {
 	line-height: 80px;
 }
@@ -333,11 +433,13 @@ ul.social {
 #chk {
 	position: absolute;
 	visibility: hidden;
-	z-index: -1111;
+	z-index: -1;
 }
+
 
 .content {
 	padding: 0 30px;
+	margin-left: auto;
 }
 
 .content img {
@@ -351,24 +453,69 @@ p {
 	margin: 10px;
 }
 
+#hoogte{
+	opacity: 0;
+}
 
-.filter {
+#hoogte.weergeven{
+	opacity: 1;
+	position: relative;
+		display: flex;
+	flex-direction: row;
 	justify-content: center;
+ 
 
-	margin: 1em;
-	padding: 1em;
+	
+}
+
+
+/* little red number inside header of page */
+#filter {
+	font-size: 1em;
+	background: ;
+	color: black;
+	border-radius: 50%;
+
+	text-align: center;
+	position: absolute;
+
+	transition: .5s;
+	/* STEP 1 - set opacity to 0 to make little red number invisible */
+	opacity: 0;
+}
+
+#filter.visible {
+	/* STEP 2 - set opacity back to 1 to make little red number visible again */
+	/* you will use the "visible" css class in your .js */
+	opacity: 1;
+	position: relative;
+}
+
+button {
+	font-family: 'Teko';
+	font-size: 1em;
+	margin-left: 13px;
+	border: none;
+	background: #0030C4;
+	color: white;
+	padding: 5px 20px;
+
+	box-shadow: 2px 2px 2px 2px #73CC72;
+}
+
 
 }
+
 .hoogteblijven {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		margin-bottom: 1em;
-		border: none;
-		transition: all .2s;
-		padding: 1em;
-		background: #73CC72;
-	}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 1em;
+	border: none;
+	transition: all .2s;
+	padding: 1em;
+	background: #73CC72;
+}
 
 fieldset {
 	display: block;
@@ -387,10 +534,50 @@ legend {
 	padding: 4px;
 }
 
+
+#bandleden {
+	margin: 2em;
+	display: flex;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+
+}
+
+figure {
+	float: right;
+	width:100%;
+	border: thin silver solid;
+	margin: 0.5em;
+	padding: 0.5em;
+}
+
+figcaption {
+	text-align: center;
+	margin: auto;
+	padding: inherit; 
+	
+}
+
+figure, img{
+	
+}
+
+
+
+
+
+
 @media (min-width: 20em) and (max-width: 30em) {
+	body {
+		overflow-x: hidden;
+	}
+
 	main {
 		background-image: url(images/telefoon.png);
 		margin-top: -20px;
+
 	}
 
 	.show-menu-btn,
@@ -398,14 +585,14 @@ legend {
 		display: block;
 	}
 
-	.menu {
+	ul.menu {
 		flex-direction: column;
-		position: absolute;
+		position: fixed;
 		width: 100%;
-		height: 100vh;
+		height: 100%;
 		background: #0030C4;
-		right: -100%;
-		padding: 80px 0;
+		transform: translateX(100%);
+
 		line-height: normal;
 		transition: 0.7s;
 		opacity: 0.8;
@@ -417,7 +604,7 @@ legend {
 	/* menu linkjes */
 	.menu a {
 		margin-top: -1em;
-		display: block;
+
 		padding: 0px;
 		text-decoration: none;
 		color: #fff;
@@ -429,13 +616,16 @@ legend {
 		padding: 0px;
 		text-decoration: none;
 		color: #73CC72;
+
 	}
 
 	/* kruisje */
+		
+
 	.hide-menu-btn {
 		position: absolute;
-		margin-top: -20em;
-		right: 18px;
+		top: 20px;
+		right: 50px;
 		font-size: 1em;
 		opacity: 1;
 
@@ -443,16 +633,19 @@ legend {
 
 	/* uitklopmenu */
 	#chk:checked ~ .menu {
-		right: 0;
+		transform: translateX(0);
 		z-index: 1;
+
 		margin-top: 10px;
+
+
 	}
 
 
 	/* menu stipjes */
 	.show-menu-btn {
 		float: right;
-		margin-top: -20px;
+		margin-top: -30px;
 		font-size: 2em;
 		line-height: 70px;
 	}
@@ -469,6 +662,20 @@ legend {
 	}
 
 
-	
-
+/* 
+https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+	https://developers.google.com/web/updates/2019/03/prefers-reduced-motion	 */
 }
+@media (prefers-reduced-motion:reduce) {
+  article {
+    animation: none;
+	  color: black;
+  }
+	
+	h1{
+		animation: none;
+	}
+	
+	
+}
+
